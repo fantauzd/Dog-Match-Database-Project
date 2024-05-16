@@ -49,6 +49,12 @@ INSERT INTO Shelters (name, email, street_address, city, postal_code, state)
 UPDATE Dogs
     SET is_active = 0
 WHERE shelter_id = :shelter_id_input;
+UPDATE Matches
+    INNER JOIN
+        (SELECT dog_id, shelter_id FROM Dogs)
+    ON Matches.dog_id = Dogs.dog_id
+    SET Matches.is_active = 0
+Where Dogs.shelter_id = :shelter_id_input;
 
 --prepopulate update form with info from shelters, shelters_update.html
 SELECT shelter_id, name, email, street_address, city, postal_code, state
@@ -92,7 +98,7 @@ UPDATE Dogs
     SET is_active = 0
 WHERE dog_id = :dog_id_input;
 UPDATE Matches
-    SET is active = 0
+    SET is_active = 0
 WHERE dog_id = :dog_id_input;
 
 --prepopulate update form with info from dogs, dogs_update.html
