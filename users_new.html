@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New User</title>
+</head>
+<body>
+
+<h2>Add New User</h2>
+
+<form action="" method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="birthdate">Birthdate:</label><br>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
+
+    <label for="home_type">Home Type:</label><br>
+    <input type="text" id="home_type" name="home_type"><br><br>
+
+    <label for="street_address">Street Address:</label><br>
+    <input type="text" id="street_address" name="street_address" required><br><br>
+
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="postal_code">Postal Code:</label><br>
+    <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+    <label for="state">State:</label><br>
+    <input type="text" id="state" name="state" required><br><br>
+
+    <label for="activity_preference">Activity Preference:</label><br>
+    <input type="number" id="activity_preference" name="activity_preference" min="1" max="5"><br><br>
+
+    <label for="shedding_preference">Shedding Preference:</label><br>
+    <input type="number" id="shedding_preference" name="shedding_preference" min="1" max="5"><br><br>
+
+    <label for="training_preference">Training Preference:</label><br>
+    <input type="number" id="training_preference" name="training_preference" min="1" max="5"><br><br>
+
+    <label for="size_preference">Size Preference:</label><br>
+    <input type="text" id="size_preference" name="size_preference"><br><br>
+
+    <label for="has_children">Has Children (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="has_children" name="has_children" min="0" max="1"><br><br>
+
+    <label for="has_dog">Has Dog (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="has_dog" name="has_dog" min="0" max="1"><br><br>
+
+    <label for="has_cat">Has Cat (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="has_cat" name="has_cat" min="0" max="1"><br><br>
+
+    <label for="is_active">Is Active (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="is_active" name="is_active" min="0" max="1" value="1"><br><br>
+
+    <input class="btn" type="submit" value="Add User">
+    <input class="btn" type="button" value="Cancel" onClick="browseUsers()">
+</form>
+
+</body>
+</html>
+
