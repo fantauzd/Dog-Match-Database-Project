@@ -2,6 +2,9 @@
 -- Joshua Warnick
 -- Project Group 85
 
+-- for reference:
+--      mysql -u [database_user_name] -h classmysql.engr.oregonstate.edu -p
+
 
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
