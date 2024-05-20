@@ -78,12 +78,12 @@ CREATE OR REPLACE TABLE `Dogs` (
   PRIMARY KEY (`dog_id`),
   CONSTRAINT `fk_dogs_breeds`
     FOREIGN KEY (`breed_id`)
-    REFERENCES `breeds` (`breed_id`)
+    REFERENCES `Breeds` (`breed_id`)
     ON DELETE SET NULL
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_dogs_Shelter1`
     FOREIGN KEY (`shelter_id`)
-    REFERENCES `shelters` (`shelter_id`)
+    REFERENCES `Shelters` (`shelter_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -147,7 +147,7 @@ CREATE OR REPLACE TABLE `Matches` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_matches_dogs1`
     FOREIGN KEY (`dog_id`)
-    REFERENCES `dogs` (`dog_id`)
+    REFERENCES `Dogs` (`dog_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -176,22 +176,22 @@ CREATE OR REPLACE TABLE `Adoptions` (
   INDEX `fk_adoptions_shelters1_idx` (`shelter_id` ASC) VISIBLE,
   CONSTRAINT `fk_adoptions_dogs1`
     FOREIGN KEY (`dog_id`)
-    REFERENCES `dogs` (`dog_id`)
+    REFERENCES `Dogs` (`dog_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_adoptions_users1`
     FOREIGN KEY (`user_id`)
-    REFERENCES `users` (`user_id`)
+    REFERENCES `Users` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_adoptions_matches1`
     FOREIGN KEY (`match_id`)
-    REFERENCES `matches` (`match_id`)
+    REFERENCES `Matches` (`match_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_adoptions_shelters1`
     FOREIGN KEY (`shelter_id`)
-    REFERENCES `shelters` (`shelter_id`)
+    REFERENCES `Shelters` (`shelter_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -221,7 +221,7 @@ CREATE OR REPLACE TABLE `Dogs_has_users` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_dogs_has_users_users1`
     FOREIGN KEY (`users_user_id`)
-    REFERENCES `users` (`user_id`)
+    REFERENCES `Users` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
