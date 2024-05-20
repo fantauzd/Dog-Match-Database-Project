@@ -142,7 +142,7 @@ CREATE OR REPLACE TABLE `Matches` (
   INDEX `fk_matches_dogs1_idx` (`dog_id` ASC) VISIBLE,
   CONSTRAINT `fk_matches_users1`
     FOREIGN KEY (`user_id`)
-    REFERENCES `users` (`user_id`)
+    REFERENCES `Users` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_matches_dogs1`
