@@ -216,7 +216,7 @@ CREATE OR REPLACE TABLE `Dogs_has_users` (
   PRIMARY KEY (`dogs_has_users_id`),
   CONSTRAINT `fk_dogs_has_users_dogs1`
     FOREIGN KEY (`dogs_dog_id`)
-    REFERENCES `dogs` (`dog_id`)
+    REFERENCES `Dogs` (`dog_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_dogs_has_users_users1`
