@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Adoption</title>
+</head>
+<body>
+
+<p><a href="index.html">Back to Index</a></p>
+<h2>Add New Adoption</h2>
+<p>Add an Adoption to the adoptions table</p>
+<form action="" method="post">
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="dog_id">Dog ID:</label><br>
+    <input type="number" id="dog_id" name="dog_id" required><br><br>
+
+    <label for="shelter_id">Shelter ID:</label><br>
+    <input type="number" id="shelter_id" name="shelter_id" required><br><br>
+
+    <label for="user_id">User ID:</label><br>
+    <input type="number" id="user_id" name="user_id"><br><br>
+
+    <label for="match_id">Match ID:</label><br>
+    <input type="number" id="match_id" name="match_id"><br><br>
+
+    <input class="btn" type="submit" value="Add Adoption">
+    <input class="btn" type="button" value="Cancel" onClick="browseAdoptions()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Shelter</title>
+    <script>
+    </script>
+</head>
+<body>
+
+<p><a href="index.html">Back to Index</a></p>
+<h2>Update Shelter</h2>
+<p>Update a Shelter that is in the shelters table </p>
+<form action="" method="post">
+    <label for="shelter_id">Select Breed ID:</label><br>
+    <select id="shelter_id" name="shelter_id" onchange="populateFields()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <br><br>
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="West Valley Humane Society"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" value="westvalleyhumanesociety@gmail.com"><br><br>
+
+    <label for="street_address">Street Address:</label><br>
+    <input type="text" id="street_address" name="street_address" value="5234 Jebba Way"><br><br>
+    
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city" value="Boise"><br><br>
+
+    <label for="postal_code">Postal Code:</label><br>
+    <input type="text" id="postal_code" name="postal_code" value="52344"><br><br>
+
+    <label for="state">State:</label><br>
+    <input type="text" id="state" name="state" value="Idaho"><br><br>
+
+    <input class="btn" type="submit" value="Update Shelter">
+    <input class="btn" type="button" value="Cancel" onClick="browseShelter()">
+</form>
+
+</body>
+</html>

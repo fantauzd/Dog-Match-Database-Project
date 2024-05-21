@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Dog</title>
+    <script>
+        function populateFields() {
+            var dogId = document.getElementById("dog_id").value;
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    document.getElementById("name").value = data.name;
+                    document.getElementById("birthdate").value = data.birthdate;
+                    document.getElementById("training_level").value = data.training_level;
+                    document.getElementById("is_family_friendly").value = data.is_family_friendly;
+                    document.getElementById("shelter_arrival_date").value = data.shelter_arrival_date;
+                    document.getElementById("is_active").value = data.is_active;
+                    document.getElementById("shelter_id").value = data.shelter_id;
+                    document.getElementById("breed_id").value = data.breed_id;
+                }
+            };
+            xhr.open("GET", "get_dog.php?dog_id=" + dogId, true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+
+<p><a href="index.html">Back to Index</a></p>
+<h2>Update Dog</h2>
+<p>Update a Dog in the dogs table</p>
+<form action="" method="post">
+    <label for="dog_id">Select Dog ID:</label><br>
+    <select id="dog_id" name="dog_id" onchange="populateFields()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="Rusty"><br><br>
+
+    <label for="birthdate">Birthdate:</label><br>
+    <input type="date" id="birthdate" name="birthdate" value="2023-12-01"><br><br>
+
+    <label for="training_level">Training Level:</label><br>
+    <input type="number" id="training_level" name="training_level" min="1" max="5" value="4"><br><br>
+
+    <label for="is_family_friendly">Family Friendly (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="is_family_friendly" name="is_family_friendly" min="0" max="1" value="1"><br><br>
+
+    <label for="shelter_arrival_date">Shelter Arrival Date:</label><br>
+    <input type="date" id="shelter_arrival_date" name="shelter_arrival_date" value="2023-12-02"><br><br>
+
+    <label for="is_active">Active (0 = No, 1 = Yes):</label><br>
+    <input type="number" id="is_active" name="is_active" min="0" max="1" value="0"><br><br>
+
+    <label for="shelter_id">Shelter ID:</label><br>
+    <input type="number" id="shelter_id" name="shelter_id" value="1"><br><br>
+
+    <label for="breed_id">Breed ID:</label><br>
+    <input type="number" id="breed_id" name="breed_id" value="1"><br><br>
+
+    <input class="btn" type="submit" value="Update Dog">
+    <input class="btn" type="button" value="Cancel" onClick="browseDogs()">
+</form>
+
+</body>
+</html>
